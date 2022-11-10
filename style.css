@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 100%;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  opacity: .4;
+}
+
+p {
+  opacity: .8;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+small {
+  font-size: .29em;
+}
+
+.main {
+  background-color: rgb(92, 107, 98);
+  height: 40vh;
+}
+
+.header {
+  background-color: rgb(92, 107, 98);
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.marca {
+  margin-left: 40px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+}
+
+.irracional {
+  display: flex;
+
+}
+
+.logo {
+  width: 30%;
+  display: flex;
+  justify-self: center;
+}
+
+h6 {
+  font-size: 1em;
+  color: aqua;
+  transform: rotate(-150deg);
+  transition: transform 10s;
+  transform-style: preserve-3d;
+
+}
+
+.mode {
+  vertical-align: super
+}
+
+.nav {
+  align-items: center;
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.home {
+  opacity: 1;
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main__left {
+  margin-top: 50px;
+  width: 400px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.main__left__btm__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.main__left__btm {
+  width: 120px;
+  height: 30px;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: white;
+  border-width: 2px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  background-color: white;
+  color: rgb(92, 107, 98);
+}
+
+.main a {
+  opacity: 1;
+  font-size: .6em;
+}
+
+.book-container {
+  perspective: 600px;
+}
+
+@keyframes initAnimation {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(-30deg);
+  }
+}
+
+.book {
+  width: 200px;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(-30deg);
+  transition: 1s ease;
+  animation: 1s ease 0s 1 initAnimation;
+}
+
+.book:hover {
+  transform: rotateY(0deg);
+}
+
+.book> :first-child {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  height: 300px;
+  transform: translateZ(25px);
+  background-image: linear-gradient(to right top, #5c6b62, #536256, #4c5949, #464f3d, #404631);
+  box-shadow: 5px 5px 20px #666;
+}
+
+.book::before {
+  position: absolute;
+  content: ' ';
+  background-color: rgb(0, 0, 0);
+  left: 0;
+  top: 30px;
+  width: 48px;
+  height: 294px;
+  transform: translateX(172px) rotateY(90deg);
+  background: linear-gradient(90deg,
+      #fff 0%,
+      #f9f9f9 5%,
+      #fff 10%,
+      #f9f9f9 15%,
+      #fff 20%,
+      #f9f9f9 25%,
+      #fff 30%,
+      #f9f9f9 35%,
+      #fff 40%,
+      #f9f9f9 45%,
+      #fff 50%,
+      #f9f9f9 55%,
+      #fff 60%,
+      #f9f9f9 65%,
+      #fff 70%,
+      #f9f9f9 75%,
+      #fff 80%,
+      #f9f9f9 85%,
+      #fff 90%,
+      #f9f9f9 95%,
+      #fff 100%);
+}
+
+.book::after {
+
+  position: absolute;
+  top: 30PX;
+  left: 0;
+  content: ' ';
+  width: 200px;
+  height: 300px;
+  transform: translateZ(-25px);
+  background-image: linear-gradient(to right top, #5c6b62, #536256, #4c5949, #464f3d, #404631);
+  box-shadow: -10px 0 50px 10px #666;
+}
+
+span .book-container img {
+  width: 10px;
+
+
+}
+
+.portada {
+  display: flex;
+  flex-direction: column;
+  transform: scale(.4);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.portada__titulo {
+  margin-top: 40px;
+
+}
+
+.portada__logo {
+  transform: scale(.5);
+}
+
+a:hover {
+  opacity: .2;
+}
+
+@media (max-width: 400px) {
+  .main {
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .marca {
+    display: none;
+  }
+
+  .header {
+    justify-content: center;
+
+
+  }
+
+  .nav a {
+    padding: 10px;
+  }
+
+  .main__left {
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .main__left__btm__container {
+    margin-top: 50px;
+  }
+}
