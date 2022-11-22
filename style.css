@@ -118,13 +118,18 @@ small {
   font-size: .29em;
 }
 
+h6 {
+  font-size: 2vw;
+}
 .header {
   background-color: rgb(92, 107, 98);
   height: 50vh;
   padding: 5px;
 }
 
-
+span {
+  font-size: 1vw;
+}
 
 .nav {
   background-color: rgb(92, 107, 98);
@@ -164,7 +169,7 @@ small {
 }
 
 .erre {
-  background: linear-gradient(to bottom, #cfc09f 22%, #634f2c 24%, #cfc09f 26%, #cfc09f 27%, #ffecb3 40%, #b38834 78%);
+  background: #b38834;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -204,7 +209,7 @@ h1:after {
 
 .home {
   opacity: 1;
-  background: linear-gradient(to bottom, #cfc09f 22%, #634f2c 24%, #cfc09f 26%, #cfc09f 27%, #ffecb3 40%, #7e5d1b 78%);
+  background: #b38834;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -292,6 +297,7 @@ font-size: .4em;
   transform: rotateY(-30deg);
   transition: 1s ease;
   animation: 1s ease 0s 1 initAnimation;
+  
 }
 
 .book:hover {
@@ -304,6 +310,7 @@ font-size: .4em;
   left: 0;
   height: 170px;
   transform: translateZ(25px);
+  background-size: 1em 1em;
   background-image: linear-gradient(to right top, #5c6b62, #536256, #4c5949, #464f3d, #404631);
   box-shadow: 5px 5px 20px #666;
 }
@@ -409,6 +416,8 @@ svg {
 
   }
 
+  .book {visibility: hidden;}
+
  
   .header {
     flex-direction: row;
@@ -500,9 +509,177 @@ svg {
 }
 
 
+main {
+  margin-top:100px;
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+	justify-content: center; 
+}
 
-.main {
-  margin-top: 50px;
+.book2 {
+	--book2-height: 100vh;
+	--book2-ratio: 1.4;
+}
+
+.book2 > div {
+  line-height: 200%;
+	height: var(--book2-height);
+	width: calc(var(--book2-height) / var(--book2-ratio));
+	overflow: auto;
+	transform: scale(0.9);
+	border-radius: 6px;
+	transform-origin: left;
+  box-shadow: -10px 0 10px 0px #666;
+}
+.book2-cover {
+	display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	z-index: 9;
+	text-align: center;
+	background-size: 2em 2em;
+  background-image: linear-gradient(to right top, #5c6b62, #536256, #4c5949, #464f3d, #404631);
+	color: white;
+	transition: transform 2s;
+
+}
+
+
+
+
+
+
+.book2-content {
+  color:  rgb(92, 107, 98);
+  padding: 4px;
   display: flex;
+  flex-direction: column;
+	transform: scale(0.9) translateY(30px);
+	background-color: rgb(206, 206, 206) ;
+	transition: all 0.3s 1s;
+}
+
+.book2-content h3,
+.book2-content p {
+	opacity: 0;
+	transition: all 0.3s 0.3s;
+}
+
+h3 {
+	padding: 30px;
+  font-family: cursive;
+}
+
+p {
+	padding: 0px 30px 10px 30px;
+	text-align: justify;
+	font-size: 14px;
+}
+
+.book2-cover > div {
+	transition: opacity 0s 0.6s;
+}
+
+.book2:hover > .book2-cover {
+	transform: rotateY(180deg) scale(0.9);
+}
+
+.book2:hover > .book2-cover > div {
+	opacity: 0;
+}
+
+.book2:hover > .book2-content {
+	transform: scale(0.9) translateY(0px);
+}
+
+.book2:hover > .book2-content h3,
+.book2:hover > .book2-content p {
+	opacity: 1;
+}
+
+.main__reviews {
+  text-align: center;
+  margin-top: 60px;
+} 
+h4 {
+  color:slategrey
+}
+
+.main__order {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+  background-color:rgb(148, 170, 156);
+  height: 100px;
+  width: 100vw;
+}
+
+.main__order__book >div {
+  transform: scale(.5);
+}
+
+.book__order {
+  visibility: visible;
+}
+
+
+.main__text__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-content: space-around;
+}
+.main__button {
+  margin-top: 10px;
+}
+
+.main__reviews {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 70px;
   justify-content: center;
+  align-items: center;
+
+}
+
+.main__reviews__photos {
+ margin-top: 50px;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+}
+
+
+.main__reviews__photos {
+  display: flex;
+  justify-content: space-around;
+ 
+}
+
+.main__reviews span, .main__reviews h6{
+  color: #536256;
+}
+
+.main__reviews__photos>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width:100px;
+  height: 100px;
+}
+
+.main__reviews__photos img {
+  width: 50px;
+height: 50px;
+  border-radius: 50%;
+
 }
