@@ -128,7 +128,7 @@ h6 {
 }
 
 span {
-  font-size: 1vw;
+  font-size: .7vw;
 }
 
 .nav {
@@ -433,7 +433,10 @@ svg {
   .header_left__btm__container {
     margin-top: 50px;
   }
-
+  span {
+    font-size: 1.5vw;
+  }
+  
 
 }
 
@@ -441,7 +444,8 @@ svg {
 
 
   body {
-    padding: 0%;
+    padding: 0;
+    margin-top: 30px;
   }
 
   .menu {
@@ -449,6 +453,7 @@ svg {
   }
 
   .nav a {
+    font-size: 5vw;
     padding: 3px;
   }
 
@@ -462,6 +467,9 @@ svg {
 
   .header h1 {
     font-size: 1.5em;
+  }
+  .book2 {
+    transform: scale(.6);
   }
 }
 
