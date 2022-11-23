@@ -704,12 +704,8 @@ main {
   }
 
   .book2 {
-    transform: scale(0.8);
-    -webkit-transform: scale (0.8)
-  }
-
-  .book2 h3 {
-    font-size: 1em;
+    transform: scale(0.6);
+    -webkit-transform: scale (0.6)
   }
 
   .main__order__book {
