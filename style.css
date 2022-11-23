@@ -478,7 +478,8 @@ main {
 
 .book2-content {
   color: rgb(207, 207, 207);
-  padding: 4px;
+  padding: 10px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   transform: scale(0.9) translateY(30px);
@@ -486,14 +487,13 @@ main {
   transition: all 0.3s 1s;
 }
 
-.book2-content h3,
-.book2-content p {
+.book2-content h3 {
   margin-top: 20px;
   padding: 10px;
   opacity: 0;
   transition: all 0.3s 0.3s;
-  font-family: cursive;
-  font-size: 3vw;
+  font-family: cursive; 
+  font-size: 2vw;
 }
 
 
@@ -708,6 +708,11 @@ main {
   .book2 {
     transform: scale(0.6);
     -webkit-transform: scale (0.6)
+  }
+
+  .book2-content h3 {
+    font-size: 3em;
+    
   }
 
   .portada__book2 h4 {
