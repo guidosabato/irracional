@@ -375,10 +375,7 @@ span .book-container img {
 
 
 .portada__titulo {
-
   margin-top: 20px;
-  font-size: .7em;
-
 }
 
 svg {
@@ -472,7 +469,6 @@ main {
   background-image: linear-gradient(to right top, #5c6b62, #536256, #4c5949, #464f3d, #404631);
   color: white;
   transition: transform 2s;
-
 }
 
 
@@ -481,7 +477,7 @@ main {
 
 
 .book2-content {
-  color: rgb(92, 107, 98);
+  color: rgb(207, 207, 207);
   padding: 4px;
   display: flex;
   flex-direction: column;
@@ -526,7 +522,9 @@ main {
   text-align: center;
   margin-top: 60px;
 }
-
+.portada__book2 h4 {
+  font-size: 2vw;
+}
 
 
 .main__order {
@@ -548,7 +546,9 @@ main {
   visibility: visible;
 }
 
-
+.portada__book3 {
+  margin-top: 15px;
+}
 .main__text__button {
   display: flex;
   flex-direction: column;
