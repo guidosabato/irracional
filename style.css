@@ -559,12 +559,14 @@ p {
 .main__text__button {
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-content: space-around;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.main__button {
+#main__button {
   margin-top: 10px;
+  margin-right: 20px;
 }
 
 .main__reviews {
@@ -721,6 +723,11 @@ h1 {
   .main__text__button {
     justify-content: center;
     align-items: center;
+  }
+
+  .main__text__button>button {
+    margin-left: 39px;
+    
   }
 
   .main__text__button p {
